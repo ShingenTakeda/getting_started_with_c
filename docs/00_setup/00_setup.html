@@ -9,20 +9,61 @@
 <body>
   <div class="">
     <h1>Setup</h1>
+    <h2>Mas enfim, como eu começo a programar em C?</h2>
     <p>
-      Mas enfim, como eu começo a programar em C?<br>
+      Primeiro, nós precisamos das nossas ferramentas, já que estamos programando em uma linguagem
+      compilada, precisaremos de um compilador. Nestes tutorias, para ter pariedade com sistemas(e com a linguagem em
+      si), nos iremos usar
+      um compilador de outra linguagem para nos ajudar, o compilador da linguagem Zig.
+    </p>
+    <details>
+      <summary>Como instalar</summary>
+      <summary>Windows</summary>
+      <p>coloque no terminal: winget install --id=zig.zig -e</p>
+      <summary>Linux</summary>
+      <p>
+        dependendo da distro, provavelmente estara no repositorio,<br>
+        se estiver com uma verção antiga, baixe aqui: <a href="https://ziglang.org/">https://ziglang.org/</a> <br>
+        e coloque em PATH.
+      </p>
+    </details>
+    <p>
+      Teste se tudo estiver certo com o commando <mark>zig build</mark> na pasta deste tutorial.
+      Se não tiver nenhum erro, deu tudo certo
+    </p>
+    <h2>Estrutura basica de um programa de C</h2>
+    <h3>Função de entrada</h3>
     <pre>
       <code>
-        body {
-        color: var(--text);
-        background: var(--bg);
-        font-size: 1.15rem;
-        line-height: 1.5;
-        margin: 0;
+        int main()
+        {
+        return 0;
         }
       </code>
     </pre>
+    <p>
+      Em C, a não ser que esteja programando para sistemas embarcados, precisamos de uma
+      função de entrada, que é por onde o programa começa a executar.
     </p>
+    <h3>Macros e terminos de expreções</h3>
+    <pre>
+      <code>
+        #include &lt;stdio.h&gt;
+        int main()
+        {
+        print("Hello world!\n");
+        return 0;
+        }
+      </code>
+    </pre>
+    <p>
+      Note as duas linhas adicionadas, onde uma começa com <mark>#</mark>
+      e a outra não.A linha que começa com <mark>#</mark> é o que chamamos de <b><i><u>macro</u></i></b>,
+      que são instruções que acontecem antes do programa ser compilado, não termina com uma <mark>;</mark>.
+      <b><i><u>Macros</u></i></b> não precisão de <mark>;</mark>, enquanto expreções qualquer que não estejam
+      encapsuladas por <mark>{}</mark> necessitam.
+    </p>
+
   </div>
 </body>
 
