@@ -8,62 +8,33 @@
 
 <body>
   <div class="">
-    <h1>Setup</h1>
-    <h2>Mas enfim, como eu começo a programar em C?</h2>
+    <h1>Variaveis</h1>
+    <h2>Tipos</h2>
     <p>
-      Primeiro, nós precisamos das nossas ferramentas, já que estamos programando em uma linguagem
-      compilada, precisaremos de um compilador. Nestes tutorias, para ter pariedade com sistemas(e com a linguagem em
-      si), nos iremos usar
-      um compilador de outra linguagem para nos ajudar, o compilador da linguagem Zig.
+        C é uma linguagem tipada, onde as variaveis tem tipos que representam tipos de dados e o contexto no qual eles
+        podem ser interpretado.
+        os tipos são:
     </p>
-    <details>
-      <summary>Como instalar</summary>
-      <summary>Windows</summary>
-      <p>coloque no terminal: winget install --id=zig.zig -e</p>
-      <summary>Linux</summary>
-      <p>
-        dependendo da distro, provavelmente estara no repositorio,<br>
-        se estiver com uma verção antiga, baixe aqui: <a href="https://ziglang.org/">https://ziglang.org/</a> <br>
-        e coloque em PATH.
-      </p>
-    </details>
+    <ul>
+      <li>int: numeros inteiros de tamanho em X86_64 de 32 bits</li>
+      <li>char: characteres e numeros inteiros de tamanho de 8 bits</li>
+      <li>float: numeros reais de tamanho 32 bits seguindo <a href="https://en.wikipedia.org/wiki/IEEE_754">IEEE 754</a> </li>
+      <li>double: numeros reais de tamanho 64 bits seguindo <a href="https://en.wikipedia.org/wiki/IEEE_754">IEEE 754</a> </li>
+    </ul>
     <p>
-      Teste se tudo estiver certo com o commando <mark>zig build</mark> na pasta deste tutorial.
-      Se não tiver nenhum erro, deu tudo certo
+        E estes podem ser modificados com as palavras reservadas <mark>short</mark>, <mark>long</mark>
+        e <mark>unsigned</mark>.<br>
+        Um exemplo de uso: <mark>long int</mark>.
     </p>
-    <h2>Estrutura basica de um programa de C</h2>
-    <h3>Função de entrada</h3>
-    <pre>
-      <code>
-        int main()
-        {
-        return 0;
-        }
-      </code>
-    </pre>
+    <ul>
+      <li>short: diminui o tamanho de ints e floats pela a metade</li>
+      <li>long: dobra o tamanho de ints, floats e doubles</li>
+      <li>unsigned: deixa a representação de chars e ints para numeros apénas positivos</li>
+    </ul>
     <p>
-      Em C, a não ser que esteja programando para sistemas embarcados, precisamos de uma
-      função de entrada, que é por onde o programa começa a executar.
+      dependendo do compilador pode se usar apenas a palavra para representar
+      uma int de tamanho diferente, como uma <mark>short</mark> pode ser uma inteira de 16 bits
     </p>
-    <h3>Macros e terminos de expreções</h3>
-    <pre>
-      <code>
-        #include &lt;stdio.h&gt;
-        int main()
-        {
-        print("Hello world!\n");
-        return 0;
-        }
-      </code>
-    </pre>
-    <p>
-      Note as duas linhas adicionadas, onde uma começa com <mark>#</mark>
-      e a outra não.A linha que começa com <mark>#</mark> é o que chamamos de <b><i><u>macro</u></i></b>,
-      que são instruções que acontecem antes do programa ser compilado, não termina com uma <mark>;</mark>.
-      <b><i><u>Macros</u></i></b> não precisão de <mark>;</mark>, enquanto expreções qualquer que não estejam
-      encapsuladas por <mark>{}</mark> necessitam.
-    </p>
-
   </div>
 </body>
 
